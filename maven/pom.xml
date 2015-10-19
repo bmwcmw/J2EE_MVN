@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>j2ee</groupId>
+  <groupId>j2ee-test</groupId>
   <artifactId>maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>maven</name>
   <url>http://maven.apache.org</url>
@@ -22,4 +22,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <modules>
+  	<module>maven-ear-module</module>
+  </modules>
 </project>
