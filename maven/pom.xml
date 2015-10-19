@@ -24,5 +24,6 @@
   </dependencies>
   <modules>
   	<module>maven-ear-module</module>
+  	<module>maven-war-module</module>
   </modules>
 </project>
