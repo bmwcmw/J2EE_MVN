@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>j2ee-test</groupId>
-		<artifactId>maven</artifactId>
+		<groupId>javaee6-test</groupId>
+		<artifactId>javaee6</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>maven-war-module</artifactId>
+	<artifactId>javaee6-test-war-module</artifactId>
 	<packaging>war</packaging>
-	<name>maven-war-module Maven Webapp</name>
+	<name>Maven Webapp War module</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -52,6 +51,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>maven-war-module</finalName>
+		<finalName>javaee6-test-war-module</finalName>
 	</build>
 </project>
