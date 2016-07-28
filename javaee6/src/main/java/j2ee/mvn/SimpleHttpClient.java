@@ -11,11 +11,13 @@ import java.net.UnknownHostException;
 
 public class SimpleHttpClient {
 	public static void main(String[] args) {
+		// Main argument
 		if (args.length < 1) {
 			System.err.println("Usage: SimpleHttpClient <url>");
 			return;
 		}
 		try {
+			// Parse the URL
 			URL url = new URL(args[0]);
 			String host = url.getHost();
 			String path = url.getPath();
@@ -23,6 +25,7 @@ public class SimpleHttpClient {
 			if (port < 0) {
 				port = 80;
 			}
+			// Send the request
 			String request = "GET " + path + " HTTP/1.1\n";
 			request += "host: " + host;
 			request += "\n\n";
@@ -30,17 +33,20 @@ public class SimpleHttpClient {
 			PrintWriter writer = new PrintWriter(sock.getOutputStream());
 			writer.print(request);
 			writer.flush();
+			// Read and print the response
 			BufferedReader reader = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 			String next_record = null;
-			while ((next_record = reader.readLine()) != null)
+			while ((next_record = reader.readLine()) != null) {
+				// Output
 				System.out.println(next_record);
+			}
 			sock.close();
 		} catch (MalformedURLException e) {
-			throw new RuntimeException("Bad URL.\n" + e);
+			throw new RuntimeException("Please try again. Bad URL.\n" + e);
 		} catch (UnknownHostException e) {
-			throw new RuntimeException("Unknown host.\n" + e);
+			throw new RuntimeException("Please try again. Unknown host.\n" + e);
 		} catch (IOException e) {
-			throw new RuntimeException("Something's wrong.\n" + e);
+			throw new RuntimeException("Please try again. Something's wrong.\n" + e);
 		}
 	}
 }
