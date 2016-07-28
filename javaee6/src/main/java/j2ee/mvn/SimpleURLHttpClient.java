@@ -9,7 +9,7 @@ import java.net.Socket;
 import java.net.URL;
 import java.net.UnknownHostException;
 
-public class SimpleHttpClient {
+public class SimpleURLHttpClient {
 	public static void main(String[] args) {
 		// Main argument
 		if (args.length < 1) {
