@@ -1,4 +1,4 @@
-package j2ee.mvn;
+package j2ee.mvn.war.a.httpclient;
 
 import java.io.BufferedReader;
 import java.io.IOException;

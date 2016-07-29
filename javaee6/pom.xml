@@ -43,7 +43,7 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>maven-ear-module</module>
-		<module>maven-war-module</module>
+		<module>javaee6-test-ear-module</module>
+		<module>javaee6-test-war-module</module>
 	</modules>
 </project>

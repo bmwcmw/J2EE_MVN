@@ -1,4 +1,4 @@
-package j2ee.mvn.a_prediction;
+package j2ee.mvn.war.a.prediction;
 
 import java.beans.XMLEncoder;
 import java.io.BufferedReader;
