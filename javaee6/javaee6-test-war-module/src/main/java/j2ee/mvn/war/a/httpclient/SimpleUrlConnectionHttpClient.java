@@ -12,7 +12,8 @@ public class SimpleUrlConnectionHttpClient {
 		// Main argument
 		if (args.length < 1) {
 			System.err.println("Usage: UrlConnectionClient <url>");
-			return;
+//			return;
+			args = new String[]{"https://www.google.fr"};
 		}
 		try {
 			// Parse the URL

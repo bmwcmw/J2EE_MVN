@@ -14,7 +14,8 @@ public class SimpleURLHttpClient {
 		// Main argument
 		if (args.length < 1) {
 			System.err.println("Usage: SimpleHttpClient <url>");
-			return;
+//			return;
+			args = new String[]{"https://www.google.fr"};
 		}
 		try {
 			// Parse the URL
