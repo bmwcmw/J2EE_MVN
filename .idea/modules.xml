@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/javaee6/Java EE 6 Tests.iml" filepath="$PROJECT_DIR$/javaee6/Java EE 6 Tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6/javaee6-test-ear-module/maven-ear-module.iml" filepath="$PROJECT_DIR$/javaee6/javaee6-test-ear-module/maven-ear-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6/javaee6-test-war-module/maven-war-module.iml" filepath="$PROJECT_DIR$/javaee6/javaee6-test-war-module/maven-war-module.iml" />
+    </modules>
+  </component>
+</project>
