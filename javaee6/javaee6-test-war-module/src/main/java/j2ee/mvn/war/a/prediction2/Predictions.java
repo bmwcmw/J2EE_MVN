@@ -71,7 +71,6 @@ public class Predictions {
 			try {
 				InputStreamReader isr = new InputStreamReader(in);
 				BufferedReader reader = new BufferedReader(isr);
-				int i = 0;
 				String record = null;
 				while ((record = reader.readLine()) != null) {
 					String[] parts = record.split("!");
