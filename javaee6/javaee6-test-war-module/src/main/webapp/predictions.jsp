@@ -1,11 +1,11 @@
 <jsp:useBean id  = "preds"
-		type  = "predictions.Predictions"
-		class = "predictions.Predictions">
+		type  = "j2ee.mvn.war.a.prediction.Predictions"
+		class = "j2ee.mvn.war.a.prediction.Predictions">
 	<%	// Check the HTTP verb: if it's anything but GET,
 		// return 405 (Method Not Allowed).
 		String verb = request.getMethod();
 		if (!verb.equalsIgnoreCase("GET")) {
-			response.sendError(response.SC_METHOD_NOT_ALLOWED, "Only GET requests are allowed.");
+			response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "Only GET requests are allowed.");
 		}
 		// If it's a GET request, return the predictions.
 		else {
