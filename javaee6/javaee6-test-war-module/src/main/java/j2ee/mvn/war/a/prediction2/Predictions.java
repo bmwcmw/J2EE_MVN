@@ -13,9 +13,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.servlet.ServletContext;
 
 public class Predictions {
-	private ConcurrentMap<Integer, Prediction> predictions;
+	private ConcurrentMap<Integer, Prediction> predictions; // (*) ConcurrentMap
 	private ServletContext sctx;
-	private AtomicInteger mapKey;
+	private AtomicInteger mapKey; // (*) atomic mapKey
 
 	public Predictions() {
 		predictions = new ConcurrentHashMap<Integer, Prediction>();
@@ -42,20 +42,8 @@ public class Predictions {
 			populate();
 		return this.predictions;
 	}
-
-	public String toXML(Object obj) {
-		String xml = null;
-		try {
-			ByteArrayOutputStream out = new ByteArrayOutputStream();
-			XMLEncoder encoder = new XMLEncoder(out);
-			encoder.writeObject(obj); // serialize to XML
-			encoder.close();
-			xml = out.toString(); // stringify
-		} catch (Exception e) {
-		}
-		return xml;
-	}
-
+	
+	// (*) auto-incremented
 	public int addPrediction(Prediction p) {
 		int id = mapKey.incrementAndGet();
 		p.setId(id);
@@ -82,5 +70,18 @@ public class Predictions {
 			} catch (IOException e) {
 			}
 		}
+	}
+
+	public String toXML(Object obj) {
+		String xml = null;
+		try {
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			XMLEncoder encoder = new XMLEncoder(out);
+			encoder.writeObject(obj); // serialize to XML
+			encoder.close();
+			xml = out.toString(); // stringify
+		} catch (Exception e) {
+		}
+		return xml;
 	}
 }

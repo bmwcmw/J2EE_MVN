@@ -64,10 +64,11 @@ public class PredictionsServlet extends HttpServlet {
 				sendResponse(response, predictions.toXML(pred), json);
 			}
 		}
-	}// POST /predictions2
-		// HTTP body should contain two keys, one for the predictor ("who") and
-		// another for the prediction ("what").
-
+	}
+	
+	// POST /predictions2
+	// HTTP body should contain two keys, one for the predictor ("who") and
+	// another for the prediction ("what").
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) {
 		String who = request.getParameter("who");
@@ -108,12 +109,13 @@ public class PredictionsServlet extends HttpServlet {
 			 * the id comes first. From the client side, a hash character #
 			 * separates the id and the who/what, e.g., id=33#who=Homer Allision
 			 */
-			String[] args = data.split("#"); // id in args[0], rest in args[1]
-			String[] parts1 = args[0].split("="); // id = parts1[1]
+			String[] args = data.split("#");		// id in args[0], rest in args[1]
+			String[] parts1 = args[0].split("=");	// id = parts1[1]
 			key = parts1[1];
-			String[] parts2 = args[1].split("="); // parts2[0] is key
-			if (parts2[0].contains("who"))
+			String[] parts2 = args[1].split("=");	// parts2[0] is key
+			if (parts2[0].contains("who")) {
 				who = true;
+			}
 			rest = parts2[1];
 		} catch (Exception e) {
 			throw new HTTPException(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
@@ -123,19 +125,23 @@ public class PredictionsServlet extends HttpServlet {
 			throw new HTTPException(HttpServletResponse.SC_BAD_REQUEST);
 		// Look up the specified prediction.
 		Prediction p = predictions.getMap().get(new Integer(key.trim()));
-		if (p == null) { // not found?
+		// not found?
+		if (p == null) {
 			String msg = key + " does not map to a Prediction.\n";
 			sendResponse(response, predictions.toXML(msg), false);
-		} else { // found
+		}
+		// found
+		else {
 			if (rest == null) {
 				throw new HTTPException(HttpServletResponse.SC_BAD_REQUEST);
 			}
 			// Do the editing.
 			else {
-				if (who)
+				if (who) {
 					p.setWho(rest);
-				else
+				} else {
 					p.setWhat(rest);
+				}
 				String msg = "Prediction " + key + " has been edited.\n";
 				sendResponse(response, predictions.toXML(msg), false);
 			}
@@ -148,8 +154,9 @@ public class PredictionsServlet extends HttpServlet {
 		String param = request.getParameter("id");
 		Integer key = (param == null) ? null : new Integer(param.trim());
 		// Only one Prediction can be deleted at a time.
-		if (key == null)
+		if (key == null) {
 			throw new HTTPException(HttpServletResponse.SC_BAD_REQUEST);
+		}
 		try {
 			predictions.getMap().remove(key);
 			String msg = "Prediction " + key + " removed.\n";
@@ -162,7 +169,7 @@ public class PredictionsServlet extends HttpServlet {
 	// Method Not Allowed
 	@Override
 	public void doTrace(HttpServletRequest request, HttpServletResponse response) {
-		throw new HTTPException(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
+		throw new HTTPException(HttpServletResponse.SC_METHOD_NOT_ALLOWED); // UnsupportedOperationException;
 	}
 
 	@Override
@@ -174,15 +181,14 @@ public class PredictionsServlet extends HttpServlet {
 	public void doOptions(HttpServletRequest request, HttpServletResponse response) {
 		throw new HTTPException(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
 	}
+	
 	// Send the response payload to the client.
-
 	private void sendResponse(HttpServletResponse response, String payload, boolean json) {
 		try {
 			// Convert to JSON?
 			if (json) {
 				JSONObject jobt = XML.toJSONObject(payload);
-				payload = jobt.toString(3); // 3 is indentation level for nice
-											// look
+				payload = jobt.toString(3); // 3 is indentation level for nice look
 			}
 			OutputStream out = response.getOutputStream();
 			out.write(payload.getBytes());

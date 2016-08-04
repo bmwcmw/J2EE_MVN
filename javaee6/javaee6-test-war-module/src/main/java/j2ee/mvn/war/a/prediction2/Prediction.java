@@ -2,7 +2,7 @@ package j2ee.mvn.war.a.prediction2;
 
 import java.io.Serializable;
 
-public class Prediction implements Serializable, Comparable<Prediction> {
+public class Prediction implements Serializable, Comparable<Prediction> { // (*) Comparable
 	/**
 	 * 
 	 */
@@ -10,7 +10,7 @@ public class Prediction implements Serializable, Comparable<Prediction> {
 	
 	private String who; // person
 	private String what; // his/her prediction
-	private int id; // identifier used as lookup key
+	private int id; // (*) identifier used as lookup key
 
 	public Prediction() {
 	}
@@ -30,15 +30,15 @@ public class Prediction implements Serializable, Comparable<Prediction> {
 	public String getWhat() {
 		return this.what;
 	}
-
+	// (*) 
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	// (*) 
 	public int getId() {
 		return this.id;
 	}
-
+	// (*) 
 	public int compareTo(Prediction other) {
 		return this.id - other.id;
 	}
