@@ -9,6 +9,7 @@ import java.util.concurrent.ConcurrentMap;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.HttpHeaders;
 import javax.xml.ws.http.HTTPException;
 
 import org.json.JSONObject;
@@ -42,9 +43,10 @@ public class PredictionsServlet extends HttpServlet {
 		// Check user preference for XML or JSON by inspecting
 		// the HTTP headers for the Accept key.
 		boolean json = false;
-		String accept = request.getHeader("accept");
-		if (accept != null && accept.contains("json"))
+		String accept = request.getHeader(HttpHeaders.ACCEPT);
+		if (accept != null && accept.contains("json")) {
 			json = true;
+		}
 		// If no query string, assume client wants the full list.
 		if (key == null) {
 			ConcurrentMap<Integer, Prediction> map = predictions.getMap();
