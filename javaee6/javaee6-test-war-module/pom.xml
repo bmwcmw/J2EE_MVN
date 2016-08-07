@@ -16,6 +16,7 @@
 	<properties>
 		<SpringVersion>4.0.6.RELEASE</SpringVersion>
 		<log4j.version>1.2.16</log4j.version>
+    	<tomcat.version>8.5.2</tomcat.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -30,6 +31,38 @@
 			<artifactId>json</artifactId>
 			<version>20160212</version>
 		</dependency>
+		
+		<!-- Tomcat embedded -->
+	    <dependency>
+	        <groupId>org.apache.tomcat.embed</groupId>
+	        <artifactId>tomcat-embed-core</artifactId>
+	        <version>${tomcat.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.tomcat.embed</groupId>
+	        <artifactId>tomcat-embed-logging-juli</artifactId>
+	        <version>${tomcat.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.tomcat.embed</groupId>
+	        <artifactId>tomcat-embed-jasper</artifactId>
+	        <version>${tomcat.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.tomcat</groupId>
+	        <artifactId>tomcat-jasper</artifactId>
+	        <version>${tomcat.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.tomcat</groupId>
+	        <artifactId>tomcat-jasper-el</artifactId>
+	        <version>${tomcat.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.tomcat</groupId>
+	        <artifactId>tomcat-jsp-api</artifactId>
+	        <version>${tomcat.version}</version>
+	    </dependency>
 
 		<!-- TODO Spring dependencies to move to other project -->
 		<dependency>
@@ -59,5 +92,29 @@
 
 	<build>
 		<finalName>javaee6-test-war-module</finalName>
+		<plugins>
+	        <plugin>
+	            <groupId>org.codehaus.mojo</groupId>
+	            <artifactId>appassembler-maven-plugin</artifactId>
+	            <version>1.1.1</version>
+	            <configuration>
+	                <assembleDirectory>target</assembleDirectory>
+	                <programs>
+	                    <program>
+	                        <mainClass>j2ee.mvn.war.test.EmbeddedTomcatRunner</mainClass>
+	                        <name>webapp</name>
+	                    </program>
+	                </programs>
+	            </configuration>
+	            <executions>
+	                <execution>
+	                    <phase>package</phase>
+	                    <goals>
+	                        <goal>assemble</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+	    </plugins>
 	</build>
 </project>
