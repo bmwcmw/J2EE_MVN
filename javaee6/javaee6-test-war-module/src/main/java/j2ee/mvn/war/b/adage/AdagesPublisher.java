@@ -20,7 +20,7 @@ import com.sun.net.httpserver.HttpServer;
  */
 public class AdagesPublisher {
 	private static final int port = 9876;
-	private static final String uri = "/badage/";
+	private static final String uri = AdageConstants.PATH + "/";
 	private static final String url = "http://localhost:" + port + uri;
 
 	public static void main(String[] args) {

@@ -11,14 +11,14 @@ import java.util.Random;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Path("/")
-public class Adages {
+public class AdageResource {
 	// Add aphorisms to taste...
 	private String[] aphorisms = { "What can be shown cannot be said.",
 			"If a lion could talk, we could not understand him.",
 			"Philosophy is a battle against the bewitchment of " + "our intelligence by means of language.",
 			"Ambition is the death of thought.", "The limits of my language mean the limits of my world." };
 
-	public Adages() {
+	public AdageResource() {
 	}
 
 	@GET
