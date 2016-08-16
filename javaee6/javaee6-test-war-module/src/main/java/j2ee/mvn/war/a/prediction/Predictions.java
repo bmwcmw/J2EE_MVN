@@ -9,6 +9,9 @@ import java.io.InputStreamReader;
 
 import javax.servlet.ServletContext;
 
+/**
+ * Resource published by jsp servlet
+ */
 public class Predictions {
 	private int n = 32;
 	private Prediction[] predictions;
