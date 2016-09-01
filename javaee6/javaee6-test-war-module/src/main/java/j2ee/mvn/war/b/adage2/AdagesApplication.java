@@ -1,12 +1,19 @@
 package j2ee.mvn.war.b.adage2;
 
 import org.restlet.Application;
-import org.restlet.Restlet;
 import org.restlet.Request;
 import org.restlet.Response;
-import org.restlet.routing.Router;
-import org.restlet.data.Status;
+import org.restlet.Restlet;
 import org.restlet.data.MediaType;
+import org.restlet.data.Status;
+import org.restlet.routing.Router;
+
+import j2ee.mvn.war.b.adage2.resource.CreateResource;
+import j2ee.mvn.war.b.adage2.resource.JsonAllResource;
+import j2ee.mvn.war.b.adage2.resource.PlainResource;
+import j2ee.mvn.war.b.adage2.resource.UpdateResource;
+import j2ee.mvn.war.b.adage2.resource.XmlAllResource;
+import j2ee.mvn.war.b.adage2.resource.XmlOneResource;
 
 public class AdagesApplication extends Application {
 	@Override
