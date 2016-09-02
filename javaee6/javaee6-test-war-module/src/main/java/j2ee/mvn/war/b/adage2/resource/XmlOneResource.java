@@ -1,7 +1,6 @@
 package j2ee.mvn.war.b.adage2.resource;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.restlet.data.MediaType;
 import org.restlet.data.Status;
@@ -32,7 +31,7 @@ public class XmlOneResource extends ServerResource {
 		} catch (Exception e) {
 			return badRequest("No such ID\n");
 		}
-		List<Adage> list = Adages.getList();
+//		List<Adage> list = Adages.getList();
 		Adage adage = Adages.find(id);
 		if (null == adage) {
 			return badRequest("No adage with ID " + id + "\n");
