@@ -1,5 +1,5 @@
 /**
- * 
+ *  adages2 implements the four CRUD operations using Restlet
  */
 /**
  * @author bmwcmw
