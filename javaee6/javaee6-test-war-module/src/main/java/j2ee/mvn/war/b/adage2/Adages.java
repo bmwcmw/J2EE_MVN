@@ -4,7 +4,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Adages {
-	private static CopyOnWriteArrayList<Adage> adages;
+	protected static CopyOnWriteArrayList<Adage> adages;
 	private static AtomicInteger id;
 	static {
 		String[] aphorisms = { "What can be shown cannot be said.",
@@ -19,7 +19,7 @@ public class Adages {
 
 	public static String toPlain() {
 		String retval = "";
-		int i = 1;
+//		int i = 1;
 		for (Adage adage : adages)
 			retval += adage.toString() + "\n";
 		return retval;
