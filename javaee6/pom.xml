@@ -34,7 +34,8 @@
 		    <artifactId>javaee-api</artifactId>
 		    <version>6.0</version>
 		</dependency>
-		        
+		
+		<!-- Benchmark from Takipi : https://github.com/takipi/the-logging-olympics -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
