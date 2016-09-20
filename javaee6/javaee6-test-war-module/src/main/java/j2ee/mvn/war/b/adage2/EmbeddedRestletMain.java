@@ -3,6 +3,11 @@ package j2ee.mvn.war.b.adage2;
 import org.restlet.Component;
 import org.restlet.data.Protocol;
 
+/**
+ * Standalone mode, unnecessary if the Application is put in contianer like Tomcat
+ * @author bmwcmw
+ *
+ */
 public class EmbeddedRestletMain {
 	
 	public static void main(String[] args) throws Exception {
