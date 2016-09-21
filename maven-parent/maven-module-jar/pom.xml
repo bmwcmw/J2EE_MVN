@@ -5,6 +5,8 @@
     <artifactId>maven-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  
   <artifactId>maven-module-jar</artifactId>
+  
   <name>MavenJarModule</name>
 </project>
