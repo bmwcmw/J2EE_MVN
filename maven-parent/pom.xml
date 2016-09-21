@@ -30,5 +30,6 @@
 	<modules>
 		<module>maven-module-jar</module>
 		<module>maven-module-war</module>
+		<module>maven-module-ear</module>
 	</modules>
 </project>
