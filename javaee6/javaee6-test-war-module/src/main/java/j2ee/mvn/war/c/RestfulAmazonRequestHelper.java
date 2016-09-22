@@ -18,7 +18,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 
-public class RequestHelper {
+public class RestfulAmazonRequestHelper {
 	private static final String utf8 = "UTF-8";
 	private static final String hmacAlg = "HmacSHA256";
 	private static final String requestUri = "/onca/xml";
@@ -29,7 +29,7 @@ public class RequestHelper {
 	private SecretKeySpec secretKeySpec = null;
 	private Mac mac = null;
 
-	public RequestHelper(String endpoint, String accessKeyId, String secretKey) {
+	public RestfulAmazonRequestHelper(String endpoint, String accessKeyId, String secretKey) {
 		if (endpoint == null || endpoint.length() == 0)
 			throw new RuntimeException("The endpoint is null or empty.");
 		if (null == accessKeyId || accessKeyId.length() == 0)

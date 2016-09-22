@@ -31,7 +31,7 @@ public class RestfulAmazonClient {
 	}
 
 	private void lookupStuff(String accessKeyId, String secretKey) {
-		RequestHelper helper = new RequestHelper(endpoint, accessKeyId, secretKey);
+		RestfulAmazonRequestHelper helper = new RestfulAmazonRequestHelper(endpoint, accessKeyId, secretKey);
 		String requestUrl = null;
 //		String title = null;
 		// Store query string params in a hash.
