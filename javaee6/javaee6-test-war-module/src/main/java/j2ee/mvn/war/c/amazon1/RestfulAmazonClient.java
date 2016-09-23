@@ -1,4 +1,4 @@
-package j2ee.mvn.war.c;
+package j2ee.mvn.war.c.amazon1;
 
 import java.net.URL;
 import java.net.URLConnection;

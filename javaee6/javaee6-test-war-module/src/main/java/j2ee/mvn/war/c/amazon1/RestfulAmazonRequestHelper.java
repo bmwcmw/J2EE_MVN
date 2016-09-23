@@ -1,4 +1,4 @@
-package j2ee.mvn.war.c;
+package j2ee.mvn.war.c.amazon1;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
