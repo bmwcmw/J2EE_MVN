@@ -67,7 +67,7 @@ public class RestfulAmazonClient {
 		return response;
 	}
 
-	private String getAuthor(String xml) {
+	protected String getAuthor(String xml) {
 		String author = null;
 		try {
 			ByteArrayInputStream bais = new ByteArrayInputStream(xml.getBytes());
