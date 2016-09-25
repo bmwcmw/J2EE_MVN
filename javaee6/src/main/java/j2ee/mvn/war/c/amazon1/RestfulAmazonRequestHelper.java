@@ -16,7 +16,7 @@ import java.util.TreeMap;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.tomcat.util.codec.binary.Base64;
+import org.apache.commons.codec.binary.Base64;
 
 public class RestfulAmazonRequestHelper {
 	private static final String utf8 = "UTF-8";

@@ -16,7 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 public class StandaloneJAXBExample {
 
-	private static final String fileName = "c.StandaloneJAXBExample.xml";
+	private static final String fileName = "src" + File.separator +  "main" + File.separator 
+			+  "java" + File.separator +  "j2ee" + File.separator +  "mvn" + File.separator +  "war" + File.separator 
+			+  "c" + File.separator +  "StandaloneJAXBExample.xml";
 
 	public static void main(String[] args) {
 		try {
