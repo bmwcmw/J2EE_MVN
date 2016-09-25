@@ -54,6 +54,14 @@
 			<artifactId>json</artifactId>
 			<version>20160212</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.spec</groupId>
+			<artifactId>jboss-javaee-6.0</artifactId>
+			<version>1.0.0.Final</version>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
 		
 		<!-- Jackson -->
 		<dependency>
@@ -161,12 +169,6 @@
 	        <artifactId>org.restlet.ext.xml</artifactId>
 	        <version>${restlet-version}</version>
 	    </dependency>
-
-		<dependency>
-			<groupId>com.thoughtworks.xstream</groupId>
-			<artifactId>xstream</artifactId>
-			<version>1.4.9</version>
-		</dependency>
 	</dependencies>
 	
 	<repositories>

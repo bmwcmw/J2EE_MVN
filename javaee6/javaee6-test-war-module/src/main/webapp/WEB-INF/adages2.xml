@@ -7,7 +7,7 @@
 		<init-param>
 			<!-- Application class name -->
 			<param-name>org.restlet.application</param-name>
-			<param-value>adages2.AdagesApplication</param-value>
+			<param-value>j2ee.mvn.war.b.adage2.AdagesApplication</param-value>
 		</init-param>
 	</servlet>
 	<!-- Dispach all requests to the Restlet servlet. -->
