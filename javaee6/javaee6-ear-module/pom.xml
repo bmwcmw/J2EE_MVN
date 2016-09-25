@@ -6,20 +6,20 @@
 		<artifactId>javaee6</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>javaee6-test-ear-module</artifactId>
+	<artifactId>javaee6-ear-module</artifactId>
 	<packaging>ear</packaging>
 	<name>Maven Webapp Ear module</name>
 	
 	<dependencies>
 		<dependency>
 			<groupId>javaee6-test</groupId>
-			<artifactId>javaee6-test-war-module</artifactId>
+			<artifactId>javaee6-war-module</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>javaee6-test-ear-module</finalName>
+		<finalName>javaee6-ear-module</finalName>
 	</build>
 </project>

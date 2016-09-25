@@ -8,13 +8,13 @@
 		<artifactId>javaee6</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>javaee6-test-war-module</artifactId>
+	<artifactId>javaee6-war-module</artifactId>
 	<packaging>war</packaging>
 	<name>Maven Webapp War module</name>
 	<url>http://maven.apache.org</url>
 
 	<build>
-		<finalName>javaee6-test-war-module</finalName>
+		<finalName>javaee6-war-module</finalName>
 		<plugins>
 	        <plugin>
 	            <groupId>org.codehaus.mojo</groupId>

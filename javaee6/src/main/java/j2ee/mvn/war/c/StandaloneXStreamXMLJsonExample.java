@@ -50,6 +50,7 @@ public class StandaloneXStreamXMLJsonExample {
 		System.out.println(json);
 	}
 
+	@SuppressWarnings("unused")
 	static class PersonNoProps {
 		private String name;
 		private int age;
