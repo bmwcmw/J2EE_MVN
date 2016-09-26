@@ -1,6 +1,4 @@
-The two *.java files can be compiled as usual. 
-
-To run, provide each with a URL (e.g., http://www.amazon.com/index.html/) as a command-line argument.
+Using Servlet
 
 
 To compile and deploy: ant deploy (-Dwar.name=prediction is already set in build.xml)

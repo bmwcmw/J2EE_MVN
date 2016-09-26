@@ -96,7 +96,7 @@
 	<property name="src.dir" value="${basedir}/src" />
 	<property name="build.dir" value="${basedir}/target" />
 	<property name="dist.dir" value="${basedir}/dist" />
-	<property name="war.name" value="prediction" />
+	<property name="war.name" value="a-prediction" />
 
 	<property name="name" value="TomcatProject" />
 	<path id="master-classpath">
