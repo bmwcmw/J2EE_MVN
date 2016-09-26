@@ -64,7 +64,10 @@ public class Predictions {
 					predictions[i++] = p;
 				}
 			} catch (IOException e) {
+				e.printStackTrace();
 			}
+		} else {
+			System.err.println(filename + " not found.");
 		}
 	}
 
