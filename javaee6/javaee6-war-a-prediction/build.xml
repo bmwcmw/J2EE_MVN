@@ -96,7 +96,7 @@
 	<property name="src.dir" value="${basedir}/src" />
 	<property name="build.dir" value="${basedir}/target" />
 	<property name="dist.dir" value="${basedir}/dist" />
-	<property name="war.name" value="(Please supply a name!)" />
+	<property name="war.name" value="prediction" />
 
 	<property name="name" value="TomcatProject" />
 	<path id="master-classpath">
@@ -134,17 +134,19 @@
 
 		<!-- Copy files from source to build directory  -->
 		<copy todir="${build.dir}">
-			<fileset dir="${src.dir}">
+			<fileset dir="${src.dir}/main/java">
 				<include name="**/*.java" />
+			</fileset>
+			<fileset dir="${src.dir}/main/webapp">
 				<include name="*.jsp" />
 				<include name="*.html" />
 				<include name="*.js" />
 				<include name="*.css" />
 			</fileset>
 		</copy>
-		<copy todir="${build.dir}/WEB-INF">
-			<fileset dir="${src.dir}">
-				<include name="*.xml" />
+		<copy todir="${build.dir}">
+			<fileset dir="${src.dir}/main/webapp">
+				<include name="**/*.xml" />
 			</fileset>
 		</copy>
 		<copy todir="${build.dir}/WEB-INF/data">
