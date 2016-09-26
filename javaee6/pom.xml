@@ -78,6 +78,7 @@
 		<module>javaee6-ear-module</module>
 		<module>javaee6-war-module</module>
 		<module>javaee6-war-a-prediction</module>
+		<module>javaee6-war-b-adage</module>
 		<module>javaee6-war-b-prediction2</module>
 	</modules>
 </project>
