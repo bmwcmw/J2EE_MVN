@@ -96,7 +96,7 @@
 	<property name="src.dir" value="${basedir}/src" />
 	<property name="build.dir" value="${basedir}/target" />
 	<property name="dist.dir" value="${basedir}/dist" />
-	<property name="war.name" value="a-prediction" />
+	<property name="war.name" value="b-prediction2" />
 
 	<property name="name" value="TomcatProject" />
 	<path id="master-classpath">
@@ -138,14 +138,6 @@
 				<include name="**/*.java" />
 			</fileset>
 			<fileset dir="${src.dir}/main/webapp">
-				<include name="*.jsp" />
-				<include name="*.html" />
-				<include name="*.js" />
-				<include name="*.css" />
-			</fileset>
-		</copy>
-		<copy todir="${build.dir}">
-			<fileset dir="${src.dir}/main/webapp">
 				<include name="**/*.xml" />
 				<include name="**/*.db" />
 			</fileset>
@@ -155,8 +147,10 @@
 				<include name="*.db" />
 			</fileset>
 		</copy>
-		<copy todir="${build.dir}/WEB-INF/lib">
-			<fileset dir="${src.dir}">
+
+		<!-- Copy maven jar lib  -->
+		<copy todir="${build.dir}/javaee6-war-module/WEB-INF/lib">
+			<fileset dir="${build.dir}">
 				<include name="*.jar" />
 			</fileset>
 		</copy>
