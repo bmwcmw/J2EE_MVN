@@ -118,25 +118,6 @@
 	        <artifactId>tomcat-jsp-api</artifactId>
 	        <version>${tomcat.version}</version>
 	    </dependency>
-
-		<!-- TODO Spring dependencies to move to other project -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${SpringVersion}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${SpringVersion}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${SpringVersion}</version>
-		</dependency>
 		
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
