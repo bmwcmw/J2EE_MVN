@@ -20,7 +20,7 @@ import com.sun.net.httpserver.HttpServer;
  */
 public class PredictionsPublisher {
 	private static final int port = 9876;
-	private static final String uri = "/predicate3";
+	private static final String uri = Prediction3Constants.APPPATH;
 	private static final String url = "http://localhost:" + port + uri;
 
 	public static void main(String[] args) {

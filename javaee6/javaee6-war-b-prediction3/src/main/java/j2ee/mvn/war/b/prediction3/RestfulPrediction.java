@@ -6,7 +6,7 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("/prediction3")
+@ApplicationPath(Prediction3Constants.APPPATH)
 public class RestfulPrediction extends Application {
 	
 	public Set<Class<?>> getClasses() {
