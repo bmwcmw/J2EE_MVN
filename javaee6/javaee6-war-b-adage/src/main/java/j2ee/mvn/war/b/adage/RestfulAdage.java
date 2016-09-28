@@ -5,7 +5,7 @@ import java.util.HashSet;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath(AdageConstants.PATH)
+@ApplicationPath(AdageConstants.APPPATH)
 public class RestfulAdage extends Application {
 
 	@Override

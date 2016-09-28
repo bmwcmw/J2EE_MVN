@@ -1,5 +1,5 @@
 package j2ee.mvn.war.b.adage;
 
 public class AdageConstants {
-	public static final String PATH = "/badage";
+	public static final String APPPATH = "/badage";
 }
