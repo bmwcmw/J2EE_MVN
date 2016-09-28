@@ -150,9 +150,10 @@
 		</copy>
 
 		<!-- TODO : Copy maven jar lib instead of lib/ ? -->
+		<!-- Do not copy javaee api jar : conflict with Tomcat libs -->
 		<copy todir="${build.dir}/WEB-INF/lib">
 			<fileset dir="${lib.dir}">
-				<include name="*.jar" />
+				<include name="json.jar" />
 			</fileset>
 		</copy>
 	</target>
