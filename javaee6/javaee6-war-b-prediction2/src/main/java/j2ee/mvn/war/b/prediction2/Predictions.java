@@ -19,6 +19,7 @@ public class Predictions {
 
 	public Predictions() {
 		predictions = new ConcurrentHashMap<Integer, Prediction>();
+		mapKey = new AtomicInteger();
 	}
 
 	public void setServletContext(ServletContext sctx) {
