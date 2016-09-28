@@ -19,7 +19,7 @@ import javax.ws.rs.core.Response;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@Path("/")
+@Path("/predresource3")
 public class PredictionsResource {
 	@Context
 	private ServletContext sctx; // dependency injection
