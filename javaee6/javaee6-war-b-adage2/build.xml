@@ -97,7 +97,7 @@
 	<property name="build.dir" value="${basedir}/target" />
 	<property name="dist.dir" value="${basedir}/dist" />
 	<property name="lib.dir" value="${basedir}/lib" />
-	<property name="war.name" value="b-adage" />
+	<property name="war.name" value="b-adage2" />
 
 	<property name="name" value="TomcatProject" />
 	<path id="master-classpath">
@@ -144,7 +144,6 @@
 		</copy>
 
 		<!-- TODO : Copy maven jar lib instead of lib/ ? -->
-		<!-- Do not copy javaee api jar : conflict with Tomcat libs -->
 		<copy todir="${build.dir}/WEB-INF/lib">
 			<fileset dir="${lib.dir}">
 				<include name="*.jar" />

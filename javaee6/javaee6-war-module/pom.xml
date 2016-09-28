@@ -16,29 +16,29 @@
 	<build>
 		<finalName>javaee6-war-module</finalName>
 		<plugins>
-	        <plugin>
-	            <groupId>org.codehaus.mojo</groupId>
-	            <artifactId>appassembler-maven-plugin</artifactId>
-	            <version>1.1.1</version>
-	            <configuration>
-	                <assembleDirectory>target</assembleDirectory>
-	                <programs>
-	                    <program>
-	                        <mainClass>j2ee.mvn.war.test.EmbeddedTomcatRunner</mainClass>
-	                        <name>webapp</name>
-	                    </program>
-	                </programs>
-	            </configuration>
-	            <executions>
-	                <execution>
-	                    <phase>package</phase>
-	                    <goals>
-	                        <goal>assemble</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
-	        </plugin>
-	    </plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<configuration>
+					<assembleDirectory>target</assembleDirectory>
+					<programs>
+						<program>
+							<mainClass>j2ee.mvn.war.test.EmbeddedTomcatRunner</mainClass>
+							<name>webapp</name>
+						</program>
+					</programs>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencies>
@@ -56,19 +56,19 @@
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- Jackson -->
 		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-core</artifactId>
-		    <version>${jackson.version}</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>${jackson.version}</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
-		
+
 		<!-- Jersey -->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
@@ -80,77 +80,49 @@
 			<artifactId>jersey-server</artifactId>
 			<version>${jersey.version}</version>
 		</dependency>
-		
+
 		<!-- Tomcat embedded -->
-	    <dependency>
-	        <groupId>org.apache.tomcat.embed</groupId>
-	        <artifactId>tomcat-embed-core</artifactId>
-	        <version>${tomcat.version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.apache.tomcat.embed</groupId>
-	        <artifactId>tomcat-embed-logging-juli</artifactId>
-	        <version>${tomcat.version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.apache.tomcat.embed</groupId>
-	        <artifactId>tomcat-embed-jasper</artifactId>
-	        <version>${tomcat.version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.apache.tomcat</groupId>
-	        <artifactId>tomcat-jasper</artifactId>
-	        <version>${tomcat.version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.apache.tomcat</groupId>
-	        <artifactId>tomcat-jasper-el</artifactId>
-	        <version>${tomcat.version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.apache.tomcat</groupId>
-	        <artifactId>tomcat-jsp-api</artifactId>
-	        <version>${tomcat.version}</version>
-	    </dependency>
-		
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-core</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-logging-juli</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jasper</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jasper-el</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
-            <version>${log4j.version}</version>
+			<version>${log4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-            <version>${log4j.version}</version>
+			<version>${log4j.version}</version>
 		</dependency>
-		
-	    <dependency>
-	        <groupId>org.restlet.jse</groupId>
-	        <artifactId>org.restlet</artifactId>
-	        <version>${restlet-version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.restlet.jse</groupId>
-	        <artifactId>org.restlet.ext.json</artifactId>
-	        <version>${restlet-version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.restlet.jee</groupId>
-	        <artifactId>org.restlet.ext.servlet</artifactId>
-	        <version>${restlet-version}</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.restlet.jse</groupId>
-	        <artifactId>org.restlet.ext.xml</artifactId>
-	        <version>${restlet-version}</version>
-	    </dependency>
 	</dependencies>
-	
-	<repositories>
-	    <repository>
-	        <id>maven-restlet</id>
-	        <name>Restlet repository</name>
-	        <url>https://maven.restlet.com</url>
-	    </repository>
-	</repositories>
+
 </project>
