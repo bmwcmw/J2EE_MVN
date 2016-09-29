@@ -82,5 +82,6 @@
 		<module>javaee6-war-b-adage</module>
 		<module>javaee6-war-b-prediction3</module>
 		<module>javaee6-war-b-adage2</module>
+		<module>javaee6-war-b-adage3</module>
 	</modules>
 </project>
