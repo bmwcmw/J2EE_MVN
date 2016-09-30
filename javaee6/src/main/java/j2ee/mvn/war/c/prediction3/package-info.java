@@ -1,14 +1,14 @@
 /**
  * WADL2JAVBA generated client
  * 
- * As an example, recall the predictions3JAX-RS service from Chapter 2whose base URL is:
- * http://localhost:8080/predictions3/resourcesP/
+ * As an example, recall the predictions3 JAX-RS service from Chapter 2whose base URL is:
+ * http://127.0.0.1:8080/b-prediction3/pred3app/predresource3/xml
  * 
  * The WADL document for this service is available under Jersey with the URL:
- * http://localhost:8080/predictions3/resourcesP/application.wadl
+ * http://127.0.0.1:8080/b-prediction3/pred3app/application.wadl
  * 
  * If the implementation were Apache CXF instead of Jersey, the URL would be:
- * http://localhost:8080/predictions3/resourcesP?wadl
+ * http://127.0.0.1:8080/b-prediction3/pred3app/predresource3?wadl
  * 
  * Then run : 
  * wadl2java -o outputDir -p package [-a] [-s jaxrs20] [-c customization]* file.wadl
