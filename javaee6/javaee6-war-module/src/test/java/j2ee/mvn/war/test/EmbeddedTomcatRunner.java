@@ -16,7 +16,6 @@ import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
 
-import j2ee.mvn.war.b.prediction2.PredictionsServlet;
 
 public class EmbeddedTomcatRunner {
 	public static void main(String[] args) throws Exception {
@@ -36,7 +35,8 @@ public class EmbeddedTomcatRunner {
 		
 		Context ctx = tomcat.addContext("/", new File(".").getAbsolutePath());
 
-	    Tomcat.addServlet(ctx, "hello", new PredictionsServlet());
+		// XXX : put servlet here
+//	    Tomcat.addServlet(ctx, "hello", new PredictionsServlet());
 	    ctx.addServletMapping("/*", "hello");
 
 //		StandardContext ctx = (StandardContext) tomcat.addWebapp("/", new File(webappDirLocation).getAbsolutePath());
