@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="maven-module-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/maven-module-ear/target/MavenEarModule</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="maven-module-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/maven-module-ear/target/MavenEarModule/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/maven-module-ear/src/main/application" />
+      <element id="archive" name="maven-module-war-0.0.1-SNAPSHOT.war">
+        <element id="artifact" artifact-name="maven-module-war:war exploded" />
+      </element>
+      <element id="archive" name="maven-module-jar-0.0.1-SNAPSHOT.jar">
+        <element id="module-output" name="maven-module-jar" />
+      </element>
+    </root>
+  </artifact>
+</component>

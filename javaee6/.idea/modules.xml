@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/javaee6.iml" filepath="$PROJECT_DIR$/javaee6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-ear-module/javaee6-ear-module.iml" filepath="$PROJECT_DIR$/javaee6-ear-module/javaee6-ear-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-war-a-prediction/javaee6-war-a-prediction.iml" filepath="$PROJECT_DIR$/javaee6-war-a-prediction/javaee6-war-a-prediction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-war-b-adage/javaee6-war-b-adage.iml" filepath="$PROJECT_DIR$/javaee6-war-b-adage/javaee6-war-b-adage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-war-b-adage2/javaee6-war-b-adage2.iml" filepath="$PROJECT_DIR$/javaee6-war-b-adage2/javaee6-war-b-adage2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-war-b-adage3/javaee6-war-b-adage3.iml" filepath="$PROJECT_DIR$/javaee6-war-b-adage3/javaee6-war-b-adage3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-war-b-prediction2/javaee6-war-b-prediction2.iml" filepath="$PROJECT_DIR$/javaee6-war-b-prediction2/javaee6-war-b-prediction2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-war-b-prediction3/javaee6-war-b-prediction3.iml" filepath="$PROJECT_DIR$/javaee6-war-b-prediction3/javaee6-war-b-prediction3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee6-war-module/javaee6-war-module.iml" filepath="$PROJECT_DIR$/javaee6-war-module/javaee6-war-module.iml" />
+    </modules>
+  </component>
+</project>

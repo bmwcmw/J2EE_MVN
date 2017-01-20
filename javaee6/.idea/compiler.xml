@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="javaee6-ear-module" />
+        <module name="javaee6-war-a-prediction" />
+        <module name="javaee6-war-b-adage" />
+        <module name="javaee6-war-b-adage2" />
+        <module name="javaee6-war-b-adage3" />
+        <module name="javaee6-war-b-prediction2" />
+        <module name="javaee6-war-b-prediction3" />
+        <module name="javaee6-war-module" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="javaee6" target="1.7" />
+      <module name="javaee6-ear-module" target="1.7" />
+      <module name="javaee6-war-a-prediction" target="1.7" />
+      <module name="javaee6-war-b-adage" target="1.7" />
+      <module name="javaee6-war-b-adage2" target="1.7" />
+      <module name="javaee6-war-b-adage3" target="1.7" />
+      <module name="javaee6-war-b-prediction2" target="1.7" />
+      <module name="javaee6-war-b-prediction3" target="1.7" />
+      <module name="javaee6-war-module" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="javaee6-war-module:war">
+    <output-path>$PROJECT_DIR$/javaee6-war-module/target</output-path>
+    <root id="archive" name="javaee6-war-module.war">
+      <element id="artifact" artifact-name="javaee6-war-module:war exploded" />
+    </root>
+  </artifact>
+</component>

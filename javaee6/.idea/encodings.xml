@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-ear-module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-war-a-prediction" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-war-b-adage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-war-b-adage2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-war-b-adage3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-war-b-prediction2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-war-b-prediction3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee6-war-module" charset="UTF-8" />
+  </component>
+</project>
